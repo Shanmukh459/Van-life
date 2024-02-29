@@ -9,7 +9,7 @@ export default function About() {
         <Link className="vans-btn" to="/vans">Vans</Link>
         <Link className="about-btn" to="/about">About</Link>
       </nav>
-      <img className="about-hero" src="./about.png" />
+      <img className="about-hero" src="./assets/about.png" />
       <section className="about-sec">
         <h1>Don’t squeeze in a sedan when you could relax in a van.</h1>
         <p>

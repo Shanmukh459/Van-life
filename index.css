@@ -48,7 +48,7 @@ nav > a {
 }
 
 .home-main {
-    background: url("home.png");
+    background: url("assets/home.png");
     background-size: cover;
     color: #FFFFFF;
     margin: 0;
