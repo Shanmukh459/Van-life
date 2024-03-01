@@ -30,6 +30,11 @@ nav > a {
     cursor: pointer;
 }
 
+nav > a:hover {
+    color: #161616;
+    text-decoration: underline;
+}
+
 .home-btn {
     text-transform: uppercase;
     font-size: 1.2em;
@@ -115,4 +120,71 @@ footer {
     color: #FFFFFF;
     font-weight: 500;
     border-radius: 5px;
+}
+
+.vans-body-container {
+    padding: 0 2em;
+}
+.vans-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 2em;
+    /* place-content: center; */
+    margin-top: 2em;
+    
+}
+
+.van-card {
+    margin: 0;
+    padding: 0;
+}
+.van-card img {
+    max-width: 100%;
+    border-radius: 5px;
+    margin-bottom: 0.2em
+}
+
+.van-card p {
+    margin: 0;
+}
+
+.name-price {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between
+}
+
+.van-price,
+.van-name {
+    font-weight: 600;
+    font-size: 1.25em;
+}
+
+
+.van-price span {
+    font-size: 0.875em;
+    font-weight: 400;
+    display: block;
+    
+}
+.van-type {
+    width:max-content;
+    padding: 0.5em 1em;
+    border-radius: 5px;
+    text-transform: capitalize;
+    color: #FFEAD0;
+    
+    
+}
+.van-type.simple {
+    background: #E17654;
+    
+}
+
+.van-type.rugged {
+    background: #115E59; 
+}
+
+.van-type.luxury {
+    background: #161616;
 }
