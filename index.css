@@ -129,14 +129,18 @@ footer {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     grid-gap: 2em;
-    /* place-content: center; */
-    margin-top: 2em;
-    
+    margin-top: 2em;   
 }
 
 .van-card {
     margin: 0;
     padding: 0;
+    
+}
+
+.van-card > a {
+    color: #161616;
+    text-decoration: none;
 }
 .van-card img {
     max-width: 100%;
