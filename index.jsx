@@ -7,20 +7,18 @@ import Vans from "./pages/Vans"
 import VansDetail from './pages/VansDetail'
 
 import "./server"
+import Layout from './components/Layout';
 
 function App() {
   return (
     <BrowserRouter>
-      <nav>
-        <Link className="home-btn" to="/">#VanLife</Link>
-        <Link className="vans-btn" to="/vans">Vans</Link>
-        <Link className="about-btn" to="/about">About</Link>
-      </nav>
       <Routes>
-        <Route path="/" element={<Home/>} />
-        <Route path="/about" element={<About />} />
-        <Route path="/vans" element={<Vans />} />
-        <Route path="/vans/:id" element={<VansDetail />} />
+        <Route element={<Layout />}>
+          <Route path="/" element={<Home/>} />
+          <Route path="/about" element={<About />} />
+          <Route path="/vans" element={<Vans />} />
+          <Route path="/vans/:id" element={<VansDetail />} />
+        </Route>
       </Routes>
     </BrowserRouter>
   )

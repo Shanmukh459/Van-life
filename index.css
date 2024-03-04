@@ -20,17 +20,17 @@ button {
     font-family: Inter, sans-serif;
     border: none;
 }
-nav {
+header {
     padding: 2em 1em;
     background: #FFF7ED;
 }
-nav > a {
+header > a {
     text-decoration: none;
     color: black;
     cursor: pointer;
 }
 
-nav > a:hover {
+header > a:hover {
     color: #161616;
     text-decoration: underline;
 }
@@ -70,15 +70,17 @@ nav > a:hover {
     line-height: 1.4em;
 }
 
-.home-main button {
+.home-btn {
+    margin-top: 2em; 
+}
+
+.btn {
     width: 100%;
     background: #FF8C38;
     color: #FFFFFF;
     padding: 0.8em;
     border-radius: 5px;
     font-weight: bold;
-    margin-top: 2em;
-    
 }
 
 footer {
@@ -177,8 +179,6 @@ footer {
     border-radius: 5px;
     text-transform: capitalize;
     color: #FFEAD0;
-    
-    
 }
 .van-type.simple {
     background: #E17654;
@@ -191,4 +191,42 @@ footer {
 
 .van-type.luxury {
     background: #161616;
+}
+
+.van-detail {
+    padding: 2em;
+}
+
+.van-detail > img {
+    width: 100%;
+    border-radius: 0.5em;
+    margin-bottom: 1.5em;
+}
+
+.van-detail p {
+    margin: 0.8em 0;
+}
+
+.van-detail-name {
+    font-size: 1.75em;
+    font-weight: 800;
+}
+
+.van-detail-price {
+    font-weight: 800;
+    font-size: 1.5em;
+}
+
+.van-detail-price span {
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+.van-detail-desc {
+    font-weight: 600;
+    line-height: 1.4em;
+}
+
+.van-detail-btn {
+    margin-top: 1em;
 }
