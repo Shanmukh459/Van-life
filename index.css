@@ -41,8 +41,10 @@ header > a:hover {
     font-weight: bold;
 }
 
+.host-btn,
 .vans-btn,
-.about-btn {
+.about-btn
+ {
     float: right;
     font-size: 0.8em;
     color: #4D4D4D;
