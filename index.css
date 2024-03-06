@@ -24,13 +24,15 @@ header {
     padding: 2em 1em;
     background: #FFF7ED;
 }
-header > a {
+header > a,
+nav > a {
     text-decoration: none;
     color: black;
     cursor: pointer;
 }
 
-header > a:hover {
+header > a:hover,
+nav > a:hover {
     color: #161616;
     text-decoration: underline;
 }
@@ -51,7 +53,8 @@ header > a:hover {
     font-weight: 600;
 }
 
-.vans-btn {
+.vans-btn,
+.about-btn {
     margin-left: 1em
 }
 
@@ -96,6 +99,7 @@ footer {
 
 .about-hero {
     display: block;
+    width: 100%;
 }
 
 .about-sec {
@@ -128,6 +132,7 @@ footer {
 
 .vans-body-container {
     padding: 0 2em;
+    margin: 2em 0;
 }
 .vans-container {
     display: grid;
@@ -231,4 +236,12 @@ footer {
 
 .van-detail-btn {
     margin-top: 1em;
+}
+
+.host-navbar a{
+    font-weight: 400;
+    padding: 5px 20px;
+}
+nav a:hover {
+    font-weight: 700;
 }

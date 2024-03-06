@@ -19,9 +19,6 @@ export default function About() {
           <button>Explore our vans</button>
         </div>
       </section>
-      <footer>
-        <p>&copy; 2024 #VANLIFE</p>
-      </footer>
     </>
   )
 }

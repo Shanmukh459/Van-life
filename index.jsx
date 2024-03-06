@@ -11,6 +11,7 @@ import Reviews from './pages/Host/Reviews';
 
 import "./server"
 import Layout from './components/Layout';
+import HostLayout from './components/HostLayout';
 
 
 function App() {
@@ -23,9 +24,11 @@ function App() {
           <Route path="/vans" element={<Vans />} />
           <Route path="/vans" element={<Vans />} />
           <Route path="/vans/:id" element={<VansDetail/>} />
-          <Route path="/host" element={<Dashboard />} />
-          <Route path="/host/income" element={<Income />} />
-          <Route path="/host/reviews" element={<Reviews />} />
+          <Route path="/host" element={<HostLayout />}>
+            <Route path="/host" element={<Dashboard />} />
+            <Route path="/host/income" element={<Income />} />
+            <Route path="/host/reviews" element={<Reviews />} />
+          </Route>
         </Route>
       </Routes>
     </BrowserRouter>
