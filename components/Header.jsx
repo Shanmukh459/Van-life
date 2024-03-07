@@ -5,19 +5,19 @@ export default function Header() {
     return (
         <header>
             <Link className="home-btn" to="/">#VanLife</Link>
-            <nav>
+            <nav> 
                 <NavLink 
-                    to="/vans"
+                    to="/host"
                     className={({isActive}) => isActive && "active-link"}
-                >Vans</NavLink>
+                >Host</NavLink>
                 <NavLink 
                     to="/about"
                     className={({isActive}) => isActive && "active-link"}
                 >About</NavLink>
                 <NavLink 
-                    to="/host"
+                    to="/vans"
                     className={({isActive}) => isActive && "active-link"}
-                >Host</NavLink>
+                >Vans</NavLink>
             </nav>
         </header>
     )
