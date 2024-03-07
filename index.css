@@ -23,6 +23,8 @@ button {
 header {
     padding: 2em 1em;
     background: #FFF7ED;
+    display: flex;
+    align-items: center;
 }
 header > a,
 nav > a {
@@ -37,13 +39,20 @@ nav > a:hover {
     text-decoration: underline;
 }
 
+header nav a {
+    padding: 0 0.5em;
+}
+
+
 .home-btn {
     text-transform: uppercase;
     font-size: 1.2em;
     font-weight: bold;
+    margin: 0 auto 0 0;
+    text-align: center;
 }
 
-.host-btn,
+/* .host-btn,
 .vans-btn,
 .about-btn
  {
@@ -51,11 +60,17 @@ nav > a:hover {
     font-size: 0.8em;
     color: #4D4D4D;
     font-weight: 600;
-}
+} */
 
-.vans-btn,
+/* .vans-btn,
 .about-btn {
     margin-left: 1em
+} */
+
+.active-link {
+    font-weight: bold;
+    text-decoration: underline;
+    color: #161616;
 }
 
 .home-main {
@@ -75,9 +90,6 @@ nav > a:hover {
     line-height: 1.4em;
 }
 
-.home-btn {
-    margin-top: 2em; 
-}
 
 .btn {
     width: 100%;
