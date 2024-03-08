@@ -269,6 +269,11 @@ nav a:hover {
     font-weight: 700;
 }
 
+.host-van-link-wrapper {
+    color: unset;
+    text-decoration: unset;
+}
+
 .host-vans-container {
     padding: 5px 20px;
 }
@@ -296,7 +301,8 @@ nav a:hover {
 }
 
 
-.host-van-card-title {
+.host-van-card-title,
+.host-van-detail-title {
     font-weight: 600;
     font-size: 1.25em;  
     margin: 0 0 0.3em 0 ;  
@@ -306,4 +312,32 @@ nav a:hover {
     margin: 0;
     color: #4D4D4D;
     font-weight: 500;
+}
+
+
+.host-van-detail-layout-container {
+    padding: 1em;
+}
+.host-van-detail-container {
+    display: flex;
+    background: #FFFFFF;
+    margin-top: 2em;
+    padding: 1em;
+    gap: 1em;
+    border-radius: 0.5em;
+}
+
+.host-van-detail-container img {
+    height: 160px;
+}
+
+.host-van-detail-price {
+    margin: 0;
+    font-weight: 600;
+    font-size: 1.25em;
+}
+
+.host-van-detail-price span {
+    font-weight: 400;
+    font-size: 16px;
 }
