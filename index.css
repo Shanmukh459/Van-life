@@ -323,13 +323,17 @@ nav a:hover {
     margin-top: 2em;
 }
 
+.host-van-detail-wrapper {
+    background: #FFFFFF;
+    padding: 1em;
+    border-radius: 0.5em;
+    margin-top: 2em;
+
+}
+
 .host-van-detail-container {
     display: flex;
-    background: #FFFFFF;
-    margin-top: 2em;
-    padding: 1em;
-    gap: 1em;
-    border-radius: 0.5em;
+    gap: 1em; 
 }
 
 .host-van-detail-container img {
