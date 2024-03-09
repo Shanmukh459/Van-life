@@ -341,3 +341,7 @@ nav a:hover {
     font-weight: 400;
     font-size: 16px;
 }
+
+.host-van-detail-title {
+    margin-top: 0;
+}
