@@ -380,3 +380,34 @@ nav a:hover {
     text-decoration: underline;
     font-weight: 700;
 }
+
+.host-van-info {
+    font-weight: 700;
+    font-size: 0.875em;
+    color: #161616;
+    line-height: 1.4em;
+}
+
+.host-van-info span{
+    font-weight: 400;
+}
+
+.host-van-type {
+    text-transform: capitalize;
+}
+
+.host-van-pricing {
+    font-weight: 700;
+    font-size: 1.5em;
+    color: #161616;
+}
+
+.host-van-pricing span {
+    font-size: 16px;
+    font-weight: 500;
+    color: #4D4D4D;
+}
+
+.host-van-image {
+    max-height: 80px;
+}
