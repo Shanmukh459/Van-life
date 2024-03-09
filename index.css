@@ -40,7 +40,8 @@ nav > a {
 }
 
 header > a:hover,
-nav > a:hover {
+nav > a:hover,
+.host-van-detail-layout-container a:hover {
     color: #161616;
     text-decoration: underline;
 }
@@ -73,7 +74,8 @@ header nav a {
     margin-left: 1em
 } */
 
-.active-link {
+.active-link,
+{
     font-weight: bold;
     text-decoration: underline;
     color: #161616;
@@ -269,7 +271,8 @@ nav a:hover {
     font-weight: 700;
 }
 
-.host-van-link-wrapper {
+.host-van-link-wrapper,
+.host-van-detail-layout-container a {
     color: unset;
     text-decoration: unset;
 }
@@ -317,7 +320,9 @@ nav a:hover {
 
 .host-van-detail-layout-container {
     padding: 1em;
+    margin-top: 2em;
 }
+
 .host-van-detail-container {
     display: flex;
     background: #FFFFFF;

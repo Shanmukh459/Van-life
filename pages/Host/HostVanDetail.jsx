@@ -1,5 +1,5 @@
 import React from "react"
-import { useParams } from "react-router-dom"
+import { useParams, Link } from "react-router-dom"
 
 export default function HostVanDetail() {
     const params = useParams()
@@ -13,6 +13,9 @@ export default function HostVanDetail() {
 
     return (
         <section className="host-van-detail-layout-container">
+            <Link 
+            to=".."
+            relative="path">&larr; <span>Back to all vans</span></Link>
             {
                 van?
                 <div className="host-van-detail-container">
