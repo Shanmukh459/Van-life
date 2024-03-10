@@ -1,9 +1,15 @@
 import React from "react"
-import { Link } from "react-router-dom"
+import { Link, useSearchParams } from "react-router-dom"
 
 export default function Vans() {
-    
+    const [searchParams, setSearchParams] = useSearchParams()
     const [vans, setVans] = React.useState([])
+    
+    const typeFilter = searchParams.get("type")
+
+    const filteredVans = typeFilter
+        ? vans.filter(van => van.type == typeFilter)
+        : vans
     
     React.useEffect(() => {
         fetch("/api/vans", {
@@ -16,7 +22,7 @@ export default function Vans() {
             .then(data => {
                 setVans(data.vans)})
     }, [])
-    const vanElements = vans.map(van => {
+    const vanElements = filteredVans.map(van => {
             return (
                 <div key={van.name} className="van-card">
                     <Link to={`/vans/${van.id}`}>
