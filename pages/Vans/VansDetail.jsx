@@ -11,6 +11,8 @@ export default function VansDetail() {
             .then(res => res.json())
             .then(data => setVan(data.vans))
     }, [params.id])
+    
+    const search = location.state?.search || "" 
 
     return (
         <>
@@ -18,7 +20,7 @@ export default function VansDetail() {
             (   
                 <div className="van-detail">
                     <Link 
-                        to={location.state ? `/vans/?${location.state.search}` : ".."}
+                        to={`..${search}`}
                         relative="path">&larr; <span>Back to all vans</span></Link>
                     <img src={van.imageUrl} />
                     <p className={`van-type ${van.type}`}>{van.type}</p>
