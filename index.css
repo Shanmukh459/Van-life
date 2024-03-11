@@ -133,17 +133,24 @@ footer {
 
 .van-filter-div {
     display: flex;
-    justify-content: space-between;
+    gap: 1em;
 }
 
 .van-type-filter {
-    color: #FFEAD0;
+    background-color: #FFEAD0;
     text-transform: capitalize;
+    color: #4D4D4D;
+    cursor: pointer;
 }
 
 .van-type-filter.clear-filter:hover {
     text-decoration: underline;
     background-color: transparent;
+}
+
+.van-type-filter.clear-filter {
+    background: transparent;
+    float: right;
 }
 
 .van-type-filter.simple:hover,
@@ -208,21 +215,31 @@ footer {
     padding: 0.5em 1em;
     border-radius: 5px;
     text-transform: capitalize;
+}
+
+.van-type,
+.van-type-filter.simple.selected,
+.van-type-filter.rugged.selected,
+.van-type-filter.luxury.selected {
     color: #FFEAD0;
 }
+
 .van-type.simple,
-.van-type-filter.simple:hover {
+.van-type-filter.simple:hover,
+.van-type-filter.simple.selected {
     background: #E17654;
     
 }
 
 .van-type.rugged,
-.van-type-filter.rugged:hover {
+.van-type-filter.rugged:hover,
+.van-type-filter.rugged.selected {
     background: #115E59; 
 }
 
 .van-type.luxury,
-.van-type-filter.luxury:hover {
+.van-type-filter.luxury:hover,
+.van-type-filter.luxury.selected {
     background: #161616;
 }
 

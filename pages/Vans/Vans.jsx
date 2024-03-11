@@ -8,7 +8,7 @@ export default function Vans() {
     const typeFilter = searchParams.get("type")
 
     const filteredVans = typeFilter
-        ? vans.filter(van => van.type == typeFilter)
+        ? vans.filter(van => van.type === typeFilter)
         : vans
     
     React.useEffect(() => {
@@ -38,30 +38,46 @@ export default function Vans() {
                 </div>
             )
     })
+
+    function handleFilterChange(key, value) {
+        console.log(key, value)
+        setSearchParams(prevParams => {
+            if(value === null) {
+                prevParams.delete(key)
+            } else {
+                prevParams.set(key, value)
+            }
+            console.log(prevParams)
+            return prevParams
+        })
+    }
     
     return (
         <div className="vans-body-container">
             <h1>Explore our van options</h1>
             <div className="van-filter-div">
-                <Link 
-                    to="?type=simple"
+                <button 
+                    onClick={() => handleFilterChange("type", "simple")}
                     type="?type=simple"   
-                    className="van-type-filter simple"
-                >simple</Link>
-                <Link 
-                    to="?type=rugged"
+                    className={`van-type-filter simple ${typeFilter === "simple" ? "selected" : null}`}
+                >simple</button>
+                <button 
+                    onClick={() => handleFilterChange("type", "rugged")}
                     type="?type=rugged"   
-                    className="van-type-filter rugged"
-                >rugged</Link>
-                <Link 
-                    to="?type=luxury"
+                    className={`van-type-filter rugged ${typeFilter === "rugged" ? "selected" : null}`}
+                >rugged</button>
+                <button 
+                    onClick={() => handleFilterChange("type", "luxury")}
                     type="?type=luxury"   
-                    className="van-type-filter luxury"
-                >luxury</Link>
-                <Link
-                    to="." 
-                    className="van-type-filter clear-filter"
-                >clear filters</Link>
+                    className={`van-type-filter luxury ${typeFilter === "luxury" ? "selected" : null}`}
+                >luxury</button>
+                {   
+                    typeFilter ?
+                    (<button
+                        onClick={() => handleFilterChange("type", null)} 
+                        className="van-type-filter clear-filter"
+                    >clear filters</button>)
+                : null}
             </div>
             <div className="vans-container">
                 {vanElements}
