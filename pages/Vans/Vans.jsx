@@ -27,7 +27,10 @@ export default function Vans() {
                 <div key={van.name} className="van-card">
                     <Link 
                         to={van.id}
-                        state={{search: `?${searchParams.toString()}`}}
+                        state={{
+                            search: `?${searchParams.toString()}`, 
+                            type: typeFilter
+                        }}
                     >
                         <img src={van.imageUrl} />
                         <div>

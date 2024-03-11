@@ -13,6 +13,7 @@ export default function VansDetail() {
     }, [params.id])
     
     const search = location.state?.search || "" 
+    const type = location.state?.type || "all"
 
     return (
         <>
@@ -21,7 +22,7 @@ export default function VansDetail() {
                 <div className="van-detail">
                     <Link 
                         to={`..${search}`}
-                        relative="path">&larr; <span>Back to all vans</span></Link>
+                        relative="path">&larr; <span>Back to {type} vans</span></Link>
                     <img src={van.imageUrl} />
                     <p className={`van-type ${van.type}`}>{van.type}</p>
                     <p className="van-detail-name">{van.name}</p>
