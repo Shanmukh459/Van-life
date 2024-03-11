@@ -25,7 +25,10 @@ export default function Vans() {
     const vanElements = filteredVans.map(van => {
             return (
                 <div key={van.name} className="van-card">
-                    <Link to={`/vans/${van.id}`}>
+                    <Link 
+                        to={van.id}
+                        state={{search: searchParams.toString()}}
+                    >
                         <img src={van.imageUrl} />
                         <div>
                             <div className="name-price">
@@ -40,14 +43,12 @@ export default function Vans() {
     })
 
     function handleFilterChange(key, value) {
-        console.log(key, value)
         setSearchParams(prevParams => {
             if(value === null) {
                 prevParams.delete(key)
             } else {
                 prevParams.set(key, value)
             }
-            console.log(prevParams)
             return prevParams
         })
     }
