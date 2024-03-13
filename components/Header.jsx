@@ -1,5 +1,6 @@
 import React from "react"
 import { Link, NavLink } from "react-router-dom"
+import imageUrl from "/assets/login.png"
 
 export default function Header() {
     return (
@@ -18,6 +19,9 @@ export default function Header() {
                     to="/vans"
                     className={({isActive}) => isActive ? "active-link" : null}
                 >Vans</NavLink>
+                <Link to="login" className="login-link">
+                    <img  className="login-icon" src={imageUrl} />
+                </Link>
             </nav>
         </header>
     )
