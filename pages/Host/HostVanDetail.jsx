@@ -1,9 +1,14 @@
 import React from "react"
 import { useParams, Link, Outlet, NavLink } from "react-router-dom"
+import { getHostVans } from "../../api"
 
 export default function HostVanDetail() {
     const params = useParams()
     const [van, setVan] = React.useState(null)
+    const [loading, setLoading] = React.useState(false)
+    const [error, setError] = React.useState(null)
+    const { id } = useParams()
+
     const activeStyles = {
         fontWeight: "bold",
         textDecoration: "underline",
@@ -11,10 +16,27 @@ export default function HostVanDetail() {
     }
 
     React.useEffect(() => {
-        fetch(`/api/host/vans/${params.id}`)
-            .then(res => res.json())
-            .then(data => setVan(data.vans))
-    }, [params.id])
+        async function loadVans() {
+            setLoading(true)
+            try {
+                const data = await getHostVans(id)
+                setVan(data)
+            } catch(err) {
+                setError(err)
+            } finally {
+                setLoading(false)
+            }
+        } 
+        loadVans()
+    }, [id])
+
+    if (loading) {
+        return <h1>Loading...</h1>
+    }
+
+    if (error) {
+        return <h1>There was an error: {error.message}</h1>
+    }
 
     return (
         <section className="host-van-detail-layout-container">
