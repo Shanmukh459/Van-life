@@ -20,7 +20,6 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig)
 const db = getFirestore(app)
-console.log(db)
 
 const vansCollectionRef = collection(db, "vans")
 
@@ -51,23 +50,6 @@ export async function getHostVans() {
     }))
     return vans
 }
-
-
-// export async function getHostVans(id) {
-//     const url = id ? `/api/host/vans/${id}`: `/api/host/vans`
-//     const res = await fetch(url)
-//     console.log(res)
-//     if(!res.ok) {
-//         throw {
-//             message: "Failed to fetch vans",
-//             status: res.status,
-//             statusText: res.statusText
-//         }
-//     }
-
-//     const data = await res.json()
-//     return data.vans
-// } 
 
 export async function loginUser(creds) {
     const res = await fetch("/api/login",
