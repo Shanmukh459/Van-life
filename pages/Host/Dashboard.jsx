@@ -18,7 +18,7 @@ export default function Dashboard() {
     function renderVanElements(vans) {
         const hostVansEls = vans.map((van) => (
             <Link
-                to={van.id}
+                to={`vans/${van.id}`}
                 className="host-van-link-wrapper"
                 key={van.name}
             >
