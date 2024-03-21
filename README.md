@@ -1,23 +1,30 @@
-# co83e4aa4951425f415568d67
+# Van Life
 
-Warning: Vite enforces using jsx syntax inside jsx/tsx files, so it will complain about that. Solution: rename `.js` files to `.jsx` :)
+- This is yet another solo project which I build.
+- This is a van renting application
+- Users/public can view vans that are available to rent
+- The vans can be filtered based on the type and the user can choose which he/she likes
+- There is also a feature to host vans. The host will require to login to see and manage of his/her vans on the site
+- dynamic rendering is implemneted to redirect users to login page when they click on host page if the user is not authenticated
+- The vans information is coming from the database Firebase - Firestore
 
-Quick start:
 
-```
-$ npm install
-$ npm start
-````
+### Tech Used
 
-Head over to https://vitejs.dev/ to learn more about using vite
-## About Scrimba
+- React
+- React Router
+- Firestore
+- JavaScript
+- HTML
+- CSS
 
-At Scrimba our goal is to create the best possible coding school at the cost of a gym membership! 💜
-If we succeed with this, it will give anyone who wants to become a software developer a realistic shot at succeeding, regardless of where they live and the size of their wallets 🎉
-The Frontend Developer Career Path aims to teach you everything you need to become a Junior Developer, or you could take a deep-dive with one of our advanced courses 🚀
 
-- [Our courses](https://scrimba.com/allcourses)
-- [The Frontend Career Path](https://scrimba.com/learn/frontend)
-- [Become a Scrimba Pro member](https://scrimba.com/pricing)
+### Deployed at
 
-Happy Coding!
+- https://van-life-shanmukh.vercel.app/
+
+### Some of the screens of the app
+
+
+
+Happy coding!
