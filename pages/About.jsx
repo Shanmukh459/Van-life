@@ -1,10 +1,11 @@
 import React from "react"
 import { Link } from "react-router-dom"
+import aboutImgUrl from "../public/assets/about.png"
 
 export default function About() {
   return (
     <>
-      <img className="about-hero" src="./public/assets//about.png" />
+      <img className="about-hero" src={aboutImgUrl} />
       <section className="about-sec">
         <h1>Don’t squeeze in a sedan when you could relax in a van.</h1>
         <p>
