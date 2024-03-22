@@ -1,5 +1,5 @@
 import React from "react"
-import incomeGraphUrl from "assets/income.png"
+import incomeGraphUrl from "../../public/assets/income.png"
 
 export default function Income() {
     const transactionsData = [
