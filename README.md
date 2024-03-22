@@ -21,6 +21,8 @@
 
 ### Deployed at
 
+https://github.com/Shanmukh459/Van-life/blob/main/wireframes/intro-page.png
+
 - https://van-life-shanmukh.vercel.app/
 
 ### Some of the screens of the app
